@@ -1,0 +1,489 @@
+/* ===== Reset & Base ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #2b2b2b;
+    background-color: #fcf8f9; /* Latar lembut bernuansa pink */
+    line-height: 1.5;
+}
+
+a {
+    color: #d81b60; /* Caiyo Strawberry Pink */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Tata Letak Halaman: Sidebar Kiri + Konten Kanan (CSS Grid) ===== */
+body {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
+}
+
+/* ===== Header & Navbar (Sidebar, Flexbox) ===== */
+header {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #d81b60;
+    color: #fff;
+    padding: 1.5rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
+    box-shadow: 2px 0 8px rgba(216, 27, 96, 0.2);
+}
+
+header h1 {
+    font-size: 1.4rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+header nav a {
+    display: block;
+    padding: 0.55rem 0.75rem;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 500;
+}
+
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    text-decoration: none;
+}
+
+/* ===== Main Layout ===== */
+main {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    max-width: 1100px;
+    margin: 2rem 0;
+    padding: 0 2rem;
+}
+
+section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #f8bbd0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    color: #d81b60;
+}
+
+/* ===== Kartu Statistik (CSS Grid) ===== */
+main section:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+main section:nth-of-type(2) article {
+    background-color: #fce4ec; /* Soft Pink Pastel */
+    border: 1px solid #f8bbd0;
+    border-radius: 8px;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+main section:nth-of-type(2) article h3 {
+    font-size: 0.95rem;
+    color: #757575;
+    margin-bottom: 0.5rem;
+}
+
+main section:nth-of-type(2) article p {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #d81b60;
+}
+
+main section:nth-of-type(2) h2 {
+    grid-column: 1 / -1; /* Memaksa judul mengambil lebar penuh 1 baris */
+}
+
+/* ===== Tabel ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.65rem 0.75rem;
+    border-bottom: 1px solid #f8bbd0;
+}
+
+thead {
+    background-color: #d81b60;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fdf0f4;
+}
+
+tbody tr:hover {
+    background-color: #fce4ec;
+}
+
+/* Support untuk elemen button & tag <a> bergaya button */
+td button, td a.btn, td a.btn-hapus {
+    display: inline-block;
+    padding: 0.35rem 0.7rem;
+    margin-right: 0.35rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+td button:first-of-type, td a.btn {
+    background-color: #ff9800;
+    color: #fff;
+}
+
+td button:last-of-type, td a.btn-hapus {
+    background-color: #e53935;
+    color: #fff;
+}
+
+/* ===== Form ===== */
+form p {
+    margin-bottom: 1rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+    color: #444;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid #f8bbd0;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #d81b60;
+    box-shadow: 0 0 0 3px rgba(216, 27, 96, 0.15);
+}
+
+form button[type="submit"] {
+    background-color: #d81b60;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: #c2185b;
+}
+
+/* ===== Footer ===== */
+footer {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: center;
+    padding: 1.25rem;
+    color: #7a8794;
+    font-size: 0.9rem;
+}
+
+/* ===== Tabel Responsif ===== */
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* ===== Hamburger Menu (JS-driven) ===== */
+.nav-toggle-label {
+    display: none;
+    font-size: 1.6rem;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ===== Flash Message ===== */
+.flash {
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.flash-success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+
+.flash-error {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ffcdd2;
+}
+
+/* ===== Pesan Error Validasi ===== */
+.error {
+    display: block;
+    color: #e53935;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+/* ===== Kolom Pencarian ===== */
+.search-box {
+    margin-bottom: 1rem;
+}
+
+.search-box input {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #f8bbd0;
+    border-radius: 5px;
+}
+
+/* Style Form & Tombol Reset Data */
+.form-reset {
+    display: inline;
+}
+
+.btn-reset {
+    background: none;
+    border: none;
+    color: #999999;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+}
+
+.btn-reset:hover {
+    color: #ff4d4d;
+}
+
+header .form-reset {
+    display: block;
+}
+
+header .form-reset .btn-reset {
+    width: 100%;
+    font-weight: 500;
+    padding: 0.55rem 0.75rem;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+header .form-reset .btn-reset:hover {
+    color: #fff;
+}
+
+/* ===== Info User & Logout di Header ===== */
+/* Urutan sidebar: judul, menu, lalu info user + logout di dasar sidebar. */
+header h1 {
+    order: 1;
+}
+
+header nav:not(.navbar) {
+    order: 2;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+header nav.navbar {
+    order: 3;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.navbar span {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.95rem;
+}
+
+/* Titik hijau penanda sudah login */
+.navbar span::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    background-color: #a5d6a7;
+}
+
+header .navbar .btn-logout {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    border: 1.5px solid rgba(255, 255, 255, 0.85);
+    border-radius: 999px;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+header .navbar .btn-logout:hover {
+    background-color: #fff;
+    color: #d81b60;
+    text-decoration: none;
+}
+
+header .navbar .btn-logout:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+}
+
+/* Animasi menu mobile (sebelumnya dipanggil tapi belum didefinisikan) */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Halaman tanpa menu (login/register): header biasa di atas, tanpa sidebar */
+body:not(:has(header nav)) {
+    display: block;
+}
+
+body:not(:has(header nav)) header {
+    position: static;
+    height: auto;
+    box-shadow: 0 2px 6px rgba(216, 27, 96, 0.2);
+}
+
+body:not(:has(header nav)) main {
+    margin: 2rem auto;
+}
+
+/* ===== Responsive Breakpoints ===== */
+
+/* Tablet ke bawah: sidebar berubah jadi header di atas */
+@media (max-width: 768px) {
+    body {
+        display: block;
+    }
+
+    header {
+        position: relative;
+        height: auto;
+        overflow-y: visible;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+        padding: 1rem 1.5rem;
+        box-shadow: 0 2px 6px rgba(216, 27, 96, 0.2);
+    }
+
+    main {
+        margin: 1.5rem auto;
+        padding: 0 1.5rem;
+    }
+
+    main section:nth-of-type(2) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-toggle-label {
+        display: block;
+        order: 2;
+    }
+
+    header h1 {
+        margin-right: auto;
+    }
+
+    header nav {
+        display: none;
+        width: 100%;
+    }
+
+    header nav.nav-open {
+        display: block;
+        animation: slideDown 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Baris 1: judul + tombol ☰. Baris 2: info user. Baris 3: menu. */
+    header nav.navbar {
+        order: 3;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 0;
+    }
+
+    header nav:not(.navbar) {
+        order: 4;
+        padding-top: 0.75rem;
+    }
+
+    header nav ul {
+        gap: 0.5rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    main section:nth-of-type(2) {
+        grid-template-columns: 1fr;
+    }
+
+    form input,
+    form select,
+    form textarea {
+        max-width: 100%;
+    }
+}

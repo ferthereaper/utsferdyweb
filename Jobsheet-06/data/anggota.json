@@ -1,0 +1,6 @@
+[
+    { "nama": "Siti Aminah", "email": "siti.aminah@example.com", "no_hp": "0812xxxx", "alamat": "Malang", "tgl_daftar": "2022" },
+    { "nama": "Budi Santoso", "email": "budi.santoso@example.com", "no_hp": "0813xxxx", "alamat": "Batu", "tgl_daftar": "2025" },
+    { "nama": "Dewi Lestari", "email": "dewi.lestari@example.com", "no_hp": "0814xxxx", "alamat": "Malang", "tgl_daftar": "2024" },
+    { "nama": "Rizky Firmansyah", "email": "rizky.firmansyah@example.com", "no_hp": "0815xxxx", "alamat": "Lawang", "tgl_daftar": "2023" }
+]

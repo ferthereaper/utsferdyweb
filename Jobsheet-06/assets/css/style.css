@@ -1,0 +1,342 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #2b2b2b;
+    background-color: #fcf8f9;
+    line-height: 1.5;
+}
+
+a {
+    color: #d81b60;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Tata Letak Halaman: Sidebar Kiri + Konten Kanan (CSS Grid) ===== */
+body {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
+}
+
+header {
+    /* LATIHAN 1 JS 2*/
+    grid-column: 1;
+    grid-row: 1 / -1;
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #d81b60;
+
+    color: #fff;
+    padding: 1.5rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
+    box-shadow: 2px 0 8px rgba(216, 27, 96, 0.2);
+}
+
+header h1 {
+    font-size: 1.4rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+header nav a {
+    display: block;
+    padding: 0.55rem 0.75rem;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 500;
+}
+
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    text-decoration: none;
+}
+
+main {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    max-width: 1100px;
+    margin: 2rem 0;
+    padding: 0 2rem;
+}
+
+section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #f8bbd0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    color: #d81b60;
+}
+
+/* main section:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+} */
+
+ /* LATIHAN 2 JS 2*/
+ main section:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+main section:nth-of-type(2) article {
+    background-color: #fce4ec;
+    border: 1px solid #f8bbd0;
+    border-radius: 8px;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+main section:nth-of-type(2) article h3 {
+    font-size: 0.95rem;
+    color: #757575;
+    margin-bottom: 0.5rem;
+}
+
+main section:nth-of-type(2) article p {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #d81b60;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.65rem 0.75rem;
+    border-bottom: 1px solid #f8bbd0;
+}
+
+thead {
+    background-color: #d81b60;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fdf0f4;
+}
+
+tbody tr:hover {
+    background-color: #fce4ec;
+}
+
+td button {
+    padding: 0.35rem 0.7rem;
+    margin-right: 0.35rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+/* LATIHAN NO 3 JS 2 */
+td button.button-edit {
+    background-color: #ff9800;
+    color: #fff;
+}
+td button.button-detail {
+    background-color: #d5d4d4;
+    color: #fff;
+}
+td button.button-hapus {
+    background-color: #e53935;
+    color: #fff;
+}
+
+form p {
+    margin-bottom: 1rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+    color: #444;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid #f8bbd0;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form button[type="submit"] {
+    background-color: #d81b60;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: #c2185b;
+}
+
+footer {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: center;
+    padding: 1.25rem;
+    color: #7a8794;
+    font-size: 0.9rem;
+}
+
+main section:nth-of-type(2) h2 {
+    grid-column: 1 / -1;
+}
+
+/**Jobsheet 3*/
+.nav-toggle-label {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    font-size: 1.6rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*JS3 Latihan1*/
+@media (min-width: 1400px) {
+    main {
+        max-width: 1300px;
+    }
+}
+
+/*JS3 Latihan2*/
+/* Mengubah 768px menjadi 900px */
+@media (max-width: 900px) {
+    main section:nth-of-type(2) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 780px) {
+    header {
+        position: relative;
+        height: auto;
+        overflow-y: visible;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+        padding: 1rem 1.5rem;
+        box-shadow: 0 2px 6px rgba(216, 27, 96, 0.2);
+    }
+
+    body {
+        display: block;
+    }
+
+    main {
+        margin: 1.5rem auto;
+        padding: 0 1.5rem;
+    }
+
+    .nav-toggle-label {
+        display: block;
+    }
+
+    header nav {
+        /* display: none; */
+        width: 100%;
+        order: 3;
+        /*JS 5 Latihan 2*/
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out, margin-top 0.3s ease-in-out;
+        margin-top: 1rem;
+    }
+
+    /*JS 5*/
+    header nav.nav-open {
+        /* display: block; */
+        max-height: 300px;
+        margin-top: 1rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    main section:nth-of-type(2) {
+        grid-template-columns: 1fr;
+    }
+
+    form input,
+    form select,
+    form textarea {
+        max-width: 100%;
+    }
+}
+
+.search-box {
+    margin-bottom: 1rem;
+}
+
+.search-box input {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #f8bbd0;
+    border-radius: 4px;
+}
+
+/*JS3 Latihan 3*/
+pre {
+    max-width: 100%;
+    overflow-x: auto;
+    background-color: #2d3748;
+    color: #edf2f7;
+    padding: 1rem;
+    border-radius: 6px;
+    font-family: 'Courier New', Courier, monospace;
+}

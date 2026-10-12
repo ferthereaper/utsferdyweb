@@ -1,0 +1,12 @@
+[
+    { "nama_produk": "Keripik Tempe Original", "kategori": "Makanan", "harga": 15000, "stok": 40, "deskripsi": "Keripik tempe renyah khas Malang" },
+    { "nama_produk": "Kopi Robusta Malang 200g", "kategori": "Minuman", "harga": 45000, "stok": 25, "deskripsi": "Kopi bubuk robusta sangrai medium" },
+    { "nama_produk": "Sambal Bawang Botol", "kategori": "Makanan", "harga": 22000, "stok": 0, "deskripsi": "Sambal bawang pedas tahan 3 bulan" },
+    { "nama_produk": "Madu Hutan 250 ml", "kategori": "Minuman", "harga": 70000, "stok": 12, "deskripsi": "Madu hutan murni tanpa campuran" },
+    { "nama_produk": "Tas Anyaman Pandan", "kategori": "Kerajinan", "harga": 85000, "stok": 5, "deskripsi": "Tas anyaman pandan buatan pengrajin lokal" },
+    { "nama_produk": "Keripik Apel", "kategori": "Makanan", "harga": 18000, "stok": 30, "deskripsi": "Keripik apel Batu tanpa pengawet" },
+    { "nama_produk": "Dompet Kulit Asli", "kategori": "Kerajinan", "harga": 120000, "stok": 6, "deskripsi": "Dompet kulit sapi jahitan tangan" },
+    { "nama_produk": "Dodol Apel", "kategori": "Makanan", "harga": 20000, "stok": 18, "deskripsi": "Dodol apel manis dalam kemasan 250 g" },
+    { "nama_produk": "Jahe Instan 10 Sachet", "kategori": "Minuman", "harga": 16000, "stok": 0, "deskripsi": "Minuman jahe instan tanpa ampas" },
+    { "nama_produk": "Batik Tulis Malangan", "kategori": "Kerajinan", "harga": 250000, "stok": 2, "deskripsi": "Batik tulis motif khas Malang" }
+]

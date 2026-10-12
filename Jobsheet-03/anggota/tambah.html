@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pemesanan UMKM | Tambah Pelanggan</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Pemesanan UMKM</h1>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Beranda</a></li>
+                <li><a href="../buku/list.html">Daftar Produk</a></li>
+                <li><a href="../buku/tambah.html">Tambah Produk</a></li>
+                <li><a href="../anggota/list.html">Daftar Pelanggan</a></li>
+                <li><a href="../anggota/tambah.html">Tambah Pelanggan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Tambah Pelanggan</h2>
+            <form>
+                <p>
+                    <label for="nama">Nama Pelanggan</label><br>
+                    <input type="text" id="nama" name="nama" required>
+                </p>
+                <p>
+                    <label for="email">Email</label><br>
+                    <input type="email" name="email" id="email">
+                </p>
+                <p>
+                    <label for="no_hp">No. HP</label><br>
+                    <input type="text" id="no_hp" name="no_hp">
+                </p>
+                <p>
+                    <label for="alamat">Alamat</label><br>
+                    <textarea id="alamat" name="alamat" rows="3"></textarea>
+                </p>
+                <p>
+                    <button type="submit">Simpan</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sistem Pemesanan UMKM &mdash; Jobsheet 1</p>
+    </footer>
+</body>
+</html>

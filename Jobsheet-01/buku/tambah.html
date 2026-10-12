@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Pemesanan UMKM | Tambah Produk</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Pemesanan UMKM</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Beranda</a></li>
+                <li><a href="list.html">Daftar Produk</a></li>
+                <li><a href="tambah.html">Tambah Produk</a></li>
+                <li><a href="../anggota/list.html">Daftar Pelanggan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Tambah Produk</h2>
+            <form>
+                <p>
+                    <label for="nama_produk">Nama Produk</label><br>
+                    <input type="text" name="nama_produk" id="nama_produk" required>
+                </p>
+                <p>
+                    <label for="kategori">Kategori</label><br>
+                    <select name="kategori" id="kategori">
+                        <option value="makanan">Makanan</option>
+                        <option value="minuman">Minuman</option>
+                        <option value="kerajinan">Kerajinan</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="harga">Harga (Rp)</label><br>
+                    <input type="number" name="harga" id="harga" min="0" required>
+                </p>
+                <p>
+                    <label for="stok">Stok</label><br>
+                    <input type="number" name="stok" id="stok" min="0" required>
+                </p>
+                <p>
+                    <label for="deskripsi">Deskripsi</label><br>
+                    <textarea name="deskripsi" id="deskripsi" rows="3"></textarea>
+                </p>
+                <p>
+                    <button type="submit">Simpan</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Pemesanan UMKM | Daftar Produk</title>
+</head>
+<body>
+    <header>
+        <h1>Pemesanan UMKM</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Beranda</a></li>
+                <li><a href="list.html">Daftar Produk</a></li>
+                <li><a href="tambah.html">Tambah Produk</a></li>
+                <li><a href="../anggota/list.html">Daftar Pelanggan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Daftar Produk</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama Produk</th>
+                        <th>Kategori</th>
+                        <th>Harga</th>
+                        <th>Stok</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Keripik Tempe Original</td>
+                        <td>Makanan</td>
+                        <td>Rp 15.000</td>
+                        <td>40</td>
+                        <td>
+                            <button type="button">Edit</button>
+                            <button type="button">Hapus</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kopi Robusta Malang 200g</td>
+                        <td>Minuman</td>
+                        <td>Rp 45.000</td>
+                        <td>25</td>
+                        <td>
+                            <button type="button">Edit</button>
+                            <button type="button">Hapus</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sambal Bawang Botol</td>
+                        <td>Makanan</td>
+                        <td>Rp 22.000</td>
+                        <td>0</td>
+                        <td>
+                            <button type="button">Edit</button>
+                            <button type="button">Hapus</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Madu Hutan 250 ml</td>
+                        <td>Minuman</td>
+                        <td>Rp 70.000</td>
+                        <td>12</td>
+                        <td>
+                            <button type="button">Edit</button>
+                            <button type="button">Hapus</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tas Anyaman Pandan</td>
+                        <td>Kerajinan</td>
+                        <td>Rp 85.000</td>
+                        <td>5</td>
+                        <td>
+                            <button type="button">Edit</button>
+                            <button type="button">Hapus</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sistem Pemesanan UMKM &mdash; Jobsheet 1</p>
+    </footer>
+</body>
+</html>
