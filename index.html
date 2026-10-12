@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pilih Jobsheet | Pemesanan UMKM</title>
+    <style>
+        :root {
+            --bg: #f4f6fb;
+            --card: #ffffff;
+            --text: #1f2937;
+            --muted: #6b7280;
+            --accent: #4f46e5;
+            --border: #e5e7eb;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f172a;
+                --card: #1e293b;
+                --text: #f1f5f9;
+                --muted: #94a3b8;
+                --accent: #818cf8;
+                --border: #334155;
+            }
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+        }
+        .wrap { max-width: 880px; margin: 0 auto; padding: 56px 20px; }
+        header { text-align: center; margin-bottom: 40px; }
+        header h1 { margin: 0 0 8px; font-size: 2rem; }
+        header p { margin: 0; color: var(--muted); }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 16px;
+        }
+        .card {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 22px;
+            transition: transform .15s, border-color .15s, box-shadow .15s;
+        }
+        .card:hover, .card:focus-visible {
+            transform: translateY(-3px);
+            border-color: var(--accent);
+            box-shadow: 0 8px 24px rgba(79, 70, 229, .15);
+            outline: none;
+        }
+        .num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px; height: 44px;
+            border-radius: 12px;
+            background: var(--accent);
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 14px;
+        }
+        .card h2 { margin: 0 0 6px; font-size: 1.1rem; }
+        .card p { margin: 0 0 14px; color: var(--muted); font-size: .9rem; line-height: 1.4; }
+        .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+        .tag {
+            font-size: .72rem;
+            padding: 3px 9px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            color: var(--muted);
+        }
+        footer { text-align: center; margin-top: 40px; color: var(--muted); font-size: .85rem; }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1>Pemesanan UMKM</h1>
+            <p>Pilih jobsheet yang ingin dibuka</p>
+        </header>
+
+        <main class="grid" id="daftar"></main>
+
+        <footer>Setiap jobsheet berdiri sendiri di foldernya masing-masing.</footer>
+    </div>
+
+    <script>
+        const jobsheets = [
+            { no: "01", desc: "Struktur dasar halaman HTML.", tags: ["HTML"] },
+            { no: "02", desc: "Penambahan styling dengan CSS.", tags: ["HTML", "CSS"] },
+            { no: "03", desc: "Pengembangan layout dan tampilan.", tags: ["HTML", "CSS"] },
+            { no: "04", desc: "Penyempurnaan desain dan komponen.", tags: ["HTML", "CSS"] },
+            { no: "05", desc: "Interaksi dengan JavaScript.", tags: ["HTML", "CSS", "JS"] },
+            { no: "06", desc: "Memuat data dari file JSON (fetch).", tags: ["HTML", "CSS", "JS", "JSON"] }
+        ];
+
+        const daftar = document.getElementById("daftar");
+        daftar.innerHTML = jobsheets.map(j => `
+            <a class="card" href="Jobsheet-${j.no}/index.html">
+                <div class="num">${j.no}</div>
+                <h2>Jobsheet ${j.no}</h2>
+                <p>${j.desc}</p>
+                <div class="tags">${j.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
+            </a>
+        `).join("");
+    </script>
+</body>
+</html>
